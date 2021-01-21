@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import AppBar from './components/Nav'
 import UpdateModal from './components/UpdateModal'
 const App = () => {
-  const [allTask, setAllTask] = useState([{ task: 'This is New task', completed: true, id: Date.now() }])
+  const [allTask, setAllTask] = useState([{ task: 'This is Example  task (Default) ', completed: true, id: Date.now() }])
   const [activeUpdateForm, setActiveUpdateForm] = useState(false)
   const create = (createInfo) => {
     if (!createInfo.task) {
@@ -23,8 +23,7 @@ const App = () => {
   const updateFunction = (el) => {
     console.log(el)
     let allT = allTask
-
-    let dlTask = allT.findIndex(single => single.id ===el.id)
+    let dlTask = allT.findIndex(single => single.id === el.id)
     allT[dlTask].completed = el.completed
     allT[dlTask].task = el.task
     setAllTask([...allT])

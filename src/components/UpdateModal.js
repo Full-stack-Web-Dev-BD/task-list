@@ -50,7 +50,7 @@ export default function UpdateModal({ updateFunction  , el }) {
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle id="alert-dialog-slide-title">Create  New Task</DialogTitle>
+                <DialogTitle id="alert-dialog-slide-title">Update  Task</DialogTitle>
                 <DialogContent>
                     <Typography className="mb-4">Allow the user to toggle a task's completion property by clicking the checkbox next to it.</Typography>
                     <TextField value={task}  onChange={e => setTask(e.target.value)} required id="standard-required" label="Required" placeholder="Enter  Text" />
